@@ -1,4 +1,4 @@
-# Websocket5
+# Send Notification With WebSocket
 
 Install Composer:
 composer require textalk/websocket
