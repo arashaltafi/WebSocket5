@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebSocket Notification Form</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			// WebSocket connection url
+			var wsUrl = 'ws://192.168.1.101:8080';
+			var websocket;
+
+			// Connect to WebSocket server
+			function connect() {
+				websocket = new WebSocket(wsUrl);
+				websocket.onopen = function() {
+					console.log('Connected to WebSocket server');
+				};
+				websocket.onmessage = function(e) {
+					console.log('Received message: ' + e.data);
+				};
+				websocket.onclose = function() {
+					console.log('Disconnected from WebSocket server');
+					// Attempt to reconnect after 5 seconds
+					setTimeout(function() {
+						connect();
+					}, 5000);
+				};
+			}
+			connect();
+
+			// Form submit handler
+			$('#notification-form').submit(function(e) {
+				e.preventDefault();
+
+				// Get form data
+				var title = $('#title').val();
+				var description = $('#description').val();
+				var image = $('#image').val();
+
+				// Create JSON object
+				var data = {
+					title: title,
+					description: description,
+					image: image
+				};
+
+				// Send JSON object to WebSocket server
+				if (websocket.readyState === WebSocket.OPEN) {
+					websocket.send(JSON.stringify(data));
+					console.log('Sent message: ' + JSON.stringify(data));
+				} else {
+					console.log('WebSocket connection is not open');
+				}
+
+				// Clear form fields
+				$('#title').val('');
+				$('#description').val('');
+				$('#image').val('');
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>WebSocket Notification Form</h1>
+	<form id="notification-form">
+		<label for="title">Title:</label><br>
+		<input type="text" id="title" name="title" required><br>
+		<label for="description">Description:</label><br>
+		<textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
+		<label for="image">Image:</label><br>
+		<input type="text" id="image" name="image"><br>
+		<br>
+		<input type="submit" value="Send">
+	</form>
+</body>
+</html>

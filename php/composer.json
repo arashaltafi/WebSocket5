@@ -1,0 +1,15 @@
+{
+    "name"  : "workerman/phpsocket.io",
+    "type"  : "library",
+    "keywords": ["socket.io"],
+    "homepage": "http://www.workerman.net",
+    "license" : "MIT",
+    "require": {
+        "workerman/workerman" : ">=4.0.0",
+        "workerman/channel" : ">=1.0.0",
+        "cboden/ratchet": "^0.4.4"
+    },
+    "autoload": {
+        "psr-4": {"PHPSocketIO\\": "./src"}
+    }
+}
