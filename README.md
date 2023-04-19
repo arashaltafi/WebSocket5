@@ -1,19 +1,43 @@
-# Send Notification With WebSocket
+# Send Notification With Html Panel
+Install XAMPP
 
-Install Composer:
-composer require textalk/websocket
+Go To xampp/htdocs and create folder ("folder_name")
 
-For Run Api use This:
-php server.php
+Copy php file to folder
 
-For Stop Api use This:
-php server.php stop
+open git bash (if don't, first install git)
 
-For Status Api use This:
-php server.php status
+run "php server.php" in git bash
 
-For Run Api To Connect (users) use This:
-wscat -c ws://192.168.1.101:8080
+and open "localhost:8080/folder_name" in browser
+
+and send notif!!!
+
+
+# Send Notification With Api PostMan
+
+Install PostMan and Create New Request (GET)
+
+with this link ("http://localhost/folder_name/notification_api.php?title=arash&description=altafi&image=https://www.arashaltafi.ir/arash.jpg")
+
+and send notif!!!
+
+
+# Setting up Socket
+
+Go To xampp/htdocs and create folder ("folder_name")
+
+open git bash (if don't, first install git)
+
+run this to Install Composer: ("composer require textalk/websocket")
+
+and for run Api use This: ("php server.php")
+
+and for stop Api use This: ("php server.php stop")
+
+and for get status Api use This: ("php server.php status")
+
+and For Run Api To Connect (users) run This: ("wscat -c ws://localhost:8080")
 
 
 
