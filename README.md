@@ -1,4 +1,4 @@
-##First Setting
+# First Setting 
 Install XAMPP
 
 Go To xampp/htdocs and create folder ("folder_name")
