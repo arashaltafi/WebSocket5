@@ -1,4 +1,4 @@
-# Send Notification With Html Panel
+#First Setting
 Install XAMPP
 
 Go To xampp/htdocs and create folder ("folder_name")
@@ -9,9 +9,14 @@ open git bash (if don't, first install git)
 
 run "php server.php" in git bash
 
+
+
+# Send Notification With Html Panel
+
 and open "localhost:8080/folder_name" in browser
 
 and send notif!!!
+
 
 
 # Send Notification With Api PostMan
@@ -21,6 +26,7 @@ Install PostMan and Create New Request (GET)
 with this link ("http://localhost/folder_name/notification_api.php?title=arash&description=altafi&image=https://www.arashaltafi.ir/arash.jpg")
 
 and send notif!!!
+
 
 
 # Setting up Socket
