@@ -30,9 +30,15 @@ class MainActivity : AppCompatActivity() {
         setupWebSocket()
 
         btnSend.setOnClickListener {
-            webSocket?.send(
+            //send one user
+            /*webSocket?.send(
                 "{\"title\":\"arash\",\"description\":\"altafi\",\"image\":\"https://www" +
                         ".arashaltafi.ir/arash.jpg\",\"to\":\"95\"}"
+            )*/
+            //send all users
+            webSocket?.send(
+                "{\"title\":\"arash\",\"description\":\"altafi\",\"image\":\"https://www" +
+                        ".arashaltafi.ir/arash.jpg\",\"to\":\"\"}"
             )
         }
     }
