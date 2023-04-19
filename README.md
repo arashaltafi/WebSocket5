@@ -7,6 +7,8 @@ Copy php file to folder
 
 open git bash (if don't, first install git)
 
+run this to Install Composer: ("composer require textalk/websocket")
+
 run "php server.php" in git bash
 
 
@@ -31,13 +33,7 @@ and send notif!!!
 
 # Setting up Socket
 
-Go To xampp/htdocs and create folder ("folder_name")
-
-open git bash (if don't, first install git)
-
-run this to Install Composer: ("composer require textalk/websocket")
-
-and for run Api use This: ("php server.php")
+for run Api use This: ("php server.php")
 
 and for stop Api use This: ("php server.php stop")
 
