@@ -18,6 +18,7 @@ class ComposerStaticInit4fbf2df1eab6eaeb0630df7b0002b548
         'W' => 
         array (
             'Workerman\\' => 10,
+            'WebSocket\\' => 10,
         ),
         'S' => 
         array (
@@ -39,6 +40,7 @@ class ComposerStaticInit4fbf2df1eab6eaeb0630df7b0002b548
         ),
         'P' => 
         array (
+            'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
             'PHPSocketIO\\' => 12,
         ),
@@ -56,6 +58,10 @@ class ComposerStaticInit4fbf2df1eab6eaeb0630df7b0002b548
         'Workerman\\' => 
         array (
             0 => __DIR__ . '/..' . '/workerman/workerman',
+        ),
+        'WebSocket\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/textalk/websocket/lib',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -105,10 +111,14 @@ class ComposerStaticInit4fbf2df1eab6eaeb0630df7b0002b548
         array (
             0 => __DIR__ . '/..' . '/cboden/ratchet/src/Ratchet',
         ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/src',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'PHPSocketIO\\' => 
         array (
@@ -122,6 +132,11 @@ class ComposerStaticInit4fbf2df1eab6eaeb0630df7b0002b548
         array (
             0 => __DIR__ . '/..' . '/workerman/channel/src',
         ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/..' . '/phrity/util-errorhandler/src',
+        1 => __DIR__ . '/..' . '/phrity/net-uri/src',
     );
 
     public static $prefixesPsr0 = array (
@@ -143,6 +158,7 @@ class ComposerStaticInit4fbf2df1eab6eaeb0630df7b0002b548
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit4fbf2df1eab6eaeb0630df7b0002b548::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit4fbf2df1eab6eaeb0630df7b0002b548::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit4fbf2df1eab6eaeb0630df7b0002b548::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit4fbf2df1eab6eaeb0630df7b0002b548::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit4fbf2df1eab6eaeb0630df7b0002b548::$classMap;
 

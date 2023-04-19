@@ -29,6 +29,12 @@ class MainActivity : AppCompatActivity() {
     private fun init() = binding.apply {
         setupWebSocket()
 
+        btnSend.setOnClickListener {
+            webSocket?.send(
+                "{\"title\":\"arash\",\"description\":\"altafi\",\"image\":\"https://www" +
+                        ".arashaltafi.ir/arash.jpg\",\"to\":\"95\"}"
+            )
+        }
     }
 
     private fun setupWebSocket() = binding.apply {

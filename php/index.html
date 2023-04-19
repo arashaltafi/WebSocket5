@@ -36,12 +36,14 @@
 				var title = $('#title').val();
 				var description = $('#description').val();
 				var image = $('#image').val();
+				var to = $('#to').val();
 
 				// Create JSON object
 				var data = {
 					title: title,
 					description: description,
-					image: image
+					image: image,
+					to: to
 				};
 
 				// Send JSON object to WebSocket server
@@ -56,6 +58,7 @@
 				$('#title').val('');
 				$('#description').val('');
 				$('#image').val('');
+				$('#to').val('');
 			});
 		});
 	</script>
@@ -64,12 +67,14 @@
 	<h1>WebSocket Notification Form</h1>
 	<form id="notification-form">
 		<label for="title">Title:</label><br>
-		<input type="text" id="title" name="title" required><br>
+		<input type="text" id="title" name="title" required><br><br>
 		<label for="description">Description:</label><br>
-		<textarea id="description" name="description" rows="4" cols="50" required></textarea><br>
+		<textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
 		<label for="image">Image:</label><br>
-		<input type="text" id="image" name="image"><br>
-		<br>
+		<textarea id="image" name="image" rows="4" cols="50" required></textarea><br><br>
+		<label for="to">To:</label><br>
+		<input type="text" id="to" name="to"><br><br>
+		<br><br><br>
 		<input type="submit" value="Send">
 	</form>
 </body>
