@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>WebSocket Notification Form</title>
+	<link rel="stylesheet" href="style.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script>
 		$(document).ready(function() {
@@ -67,13 +68,13 @@
 	<h1>WebSocket Notification Form</h1>
 	<form id="notification-form">
 		<label for="title">Title:</label><br>
-		<input type="text" id="title" name="title" required><br><br>
+		<input type="text" id="title" name="title" placeholder="Enter Title..." required><br><br>
 		<label for="description">Description:</label><br>
-		<textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+		<textarea id="description" name="description" rows="4" cols="50" placeholder="Enter Description..." required></textarea><br><br>
 		<label for="image">Image:</label><br>
-		<textarea id="image" name="image" rows="4" cols="50" required></textarea><br><br>
+		<input type="url" id="image" name="image" rows="4" cols="50" placeholder="Enter Image URL..." required></textarea><br><br>
 		<label for="to">To:</label><br>
-		<input type="text" id="to" name="to"><br><br>
+		<input type="number" id="to" name="to" placeholder="Enter User ID..."><br><br>
 		<br><br><br>
 		<input type="submit" value="Send">
 	</form>
